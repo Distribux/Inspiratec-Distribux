@@ -77,22 +77,6 @@ const Sidebar = () => {
           target="_blank"
           isActive={currentPath === '/whatsapp'}
         />
-
-        {/* Separator */}
-        <div className="my-4 border-t border-slate-800" />
-
-        <SidebarItem
-          icon={<Settings />}
-          label="Configuración"
-          href="/configuracion"
-          isActive={currentPath === '/configuracion'}
-        />
-        <SidebarItem
-          icon={<HelpCircle />}
-          label="Ayuda"
-          href="/ayuda"
-          isActive={currentPath === '/ayuda'}
-        />
       </nav>
     </aside>
   );
