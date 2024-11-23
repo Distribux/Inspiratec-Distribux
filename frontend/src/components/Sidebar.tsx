@@ -6,8 +6,6 @@ import {
   TrendingUp,
   DollarSign,
   MessageCircle,
-  Settings,
-  HelpCircle
 } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
