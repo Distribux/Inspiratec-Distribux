@@ -10,6 +10,7 @@ Distribux es una plataforma avanzada diseñada para ayudar a distribuidoras farm
 - [Instalación](#instalación)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Scripts Disponibles](#scripts-disponibles)
+- [Arquitectura de la Aplicación](#arquitectura-de-la-aplicación)
 - [Contribuciones](#contribuciones)
 - [Licencia](#licencia)
 
@@ -31,8 +32,6 @@ Distribux se ha construido usando las siguientes tecnologías:
 - **ShadCN UI**: Librería de componentes de UI preconfigurados para una estética moderna.
 - **React Router**: Para la navegación y manejo de rutas en la aplicación.
 - **Tailwind CSS**: Framework de CSS de utilidad que permite un diseño rápido y personalizado.
-- **Zod**: Herramienta de validación y tipado de esquemas.
-- **Zustand**: Manejador de estado ligero y eficiente para React.
 - **Recharts**: Biblioteca de gráficos para mostrar datos de manera visual.
 - **Lucide React**: Paquete de íconos SVG.
 
@@ -100,21 +99,20 @@ Para ejecutar el frontend de Distribux en tu entorno local, sigue estos pasos:
 La estructura del proyecto sigue una organización modular para facilitar la escalabilidad y mantenibilidad.
 
 ```plaintext
-distribux/
-├── public/               # Archivos públicos como el favicon
+frontend/
 ├── src/
-│   ├── assets/           # Recursos estáticos (imágenes, fuentes, etc.)
-│   ├── components/       # Componentes reutilizables
-│   ├── lib/              # Funciones y utilidades compartidas
-│   ├── services/         # Lógica de comunicación con APIs y servicios 
-│   ├── store/            # Estado global usando Zustand
-│   ├── types/            # Tipos y esquemas de datos
-│   ├── views/            # Vistas de la aplicación
-│   ├── App.tsx           # Componente principal de la aplicación
-│   └── main.tsx          # Punto de entrada de la aplicación
-├── tailwind.config.js    # Configuración de Tailwind CSS
-├── tsconfig.json         # Configuración de TypeScript
-└── vite.config.ts        # Configuración de Vite
+│   ├── components/           # Componentes reutilizables
+│   ├── lib/                  # Funciones y utilidades compartidas 
+│   ├── views/                # Vistas de la aplicación
+│   |    ├── BatchManagement/ # Vistas relacionadas con la gestión de lotes
+│   |    ├── Dashboard/       # Vistas del panel de control
+│   |    ├── PriceManagement/ # Vistas relacionadas con la gestión de precios
+│   |    ├── SalesPrediction/ # Vistas relacionadas con la predicción de ventas
+│   ├── App.tsx               # Componente principal de la aplicación
+│   └── main.tsx              # Punto de entrada de la aplicación
+├── tailwind.config.js        # Configuración de Tailwind CSS
+├── tsconfig.json             # Configuración de TypeScript
+└── vite.config.ts            # Configuración de Vite
 ```
 
 ## Scripts Disponibles
@@ -126,6 +124,10 @@ En el directorio del proyecto, puedes ejecutar los siguientes comandos:
 - **`npm run preview`**: Inicia un servidor local para previsualizar la aplicación en su versión de producción.
 - **`npm run lint`**: Ejecuta ESLint para analizar el código en busca de errores de sintaxis y asegurar la calidad del código.
 - **`npm run format`**: Formatea automáticamente el código usando Prettier, asegurando consistencia en el estilo de escritura.
+
+## Arquitectura de la Aplicación
+
+![Arquitectura distribux](/frontend/public/arquitectura-distribux.drawio.png)
 
 ## Licencia
 
