@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   Home,
   Package,
-  ShoppingCart,
   TrendingUp,
   DollarSign,
   MessageCircle,
@@ -60,16 +59,10 @@ const Sidebar = () => {
           isActive={currentPath === '/lotes'}
         />
         <SidebarItem
-          icon={<ShoppingCart />}
-          label="Compras"
-          href="/compras"
-          isActive={currentPath === '/compras'}
-        />
-        <SidebarItem
           icon={<TrendingUp />}
           label="Predicciones de ventas"
-          href="/predicciones"
-          isActive={currentPath === '/predicciones'}
+          href="/ventas"
+          isActive={currentPath === '/ventas'}
         />
         <SidebarItem
           icon={<DollarSign />}
