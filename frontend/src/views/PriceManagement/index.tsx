@@ -90,35 +90,6 @@ const PriceManagement = () => {
         </Select>
       </div>
 
-      {/* Price Analysis */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Análisis de Precios</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-3 gap-4">
-            <div className="space-y-1">
-              <p className="text-sm text-gray-500">Precio Actual:</p>
-              <p className="text-2xl font-bold text-gray-700">
-                ${priceAnalysis.currentPrice.toFixed(2)}
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-sm text-gray-500">Precio Sugerido:</p>
-              <p className="text-2xl font-bold text-green-600">
-                ${priceAnalysis.suggestedPrice.toFixed(2)}
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-sm text-gray-500">Margen de Ganancia:</p>
-              <p className="text-2xl font-bold text-blue-600">
-                {priceAnalysis.profitMargin}%
-              </p>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
-
       {/* Estimated Impact */}
       <Card>
         <CardHeader>
@@ -152,6 +123,35 @@ const PriceManagement = () => {
                   {estimatedImpact.competitivePosition}
                 </p>
               </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Price Analysis */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Análisis de Precios</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="grid grid-cols-3 gap-4">
+            <div className="space-y-1">
+              <p className="text-sm text-gray-500">Precio Actual:</p>
+              <p className="text-2xl font-bold text-gray-700">
+                ${priceAnalysis.currentPrice.toFixed(2)}
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-sm text-gray-500">Precio Sugerido:</p>
+              <p className="text-2xl font-bold text-green-600">
+                ${priceAnalysis.suggestedPrice.toFixed(2)}
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-sm text-gray-500">Margen de Ganancia:</p>
+              <p className="text-2xl font-bold text-blue-600">
+                {priceAnalysis.profitMargin}%
+              </p>
             </div>
           </div>
         </CardContent>
